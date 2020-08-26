@@ -13,7 +13,10 @@ def main():
     while not is_valid_password(password):
         print("Invalid password!")
         password = input("> ")
-    print("Your {}-character password is valid: {}".format(len(password), password))
+    protected_word = "*" * len(password)
+    print("Your {}-character password is valid: {}".format(len(password), protected_word))
+    print(password)
+
 
 
 def is_valid_password(password):
