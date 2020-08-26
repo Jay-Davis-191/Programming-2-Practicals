@@ -20,7 +20,7 @@ print(score_converted)
 print("Your score was {:,.0f} which is {}.".format(score, score_converted))
 
 
-import random
+import rando
 random_score = random.randint(0, 101)
 random_score_converted = main(random_score)
 print("A random score is {:,.0f} which is {}.".format(random_score, random_score_converted))
