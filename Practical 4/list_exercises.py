@@ -4,15 +4,18 @@ Jay Davis Practical 4
 """
 
 number_list = []
+MAX_NUMBERS = 5
+FIRST_NUMBER = 0
+LAST_NUMBER = MAX_NUMBERS - 1
 
 def main():
-    for i in range(5):
+    for i in range(MAX_NUMBERS):
         number = int(input("Number: "))
         number_list.append(number)
 
 main()
-print(number_list[0])
-print(number_list[4])
+print(number_list[FIRST_NUMBER])
+print(number_list[LAST_NUMBER])
 number_list.sort()
 print(min(number_list))
 print(max(number_list))
@@ -61,12 +64,19 @@ print(a_names)
 
 # TODO: use a list comprehension to create a list of all of the full_names
 # in lowercase format
-# lowercase_full_names =
+lowercase_full_names = [names.lower() for names in full_names]
+print(lowercase_full_names)
 
 almost_numbers = ['0', '10', '21', '3', '-7', '88', '9']
 # TODO: use a list comprehension to create a list of integers
 # from the above list of strings
-# numbers =
+numbers = list(map(int, almost_numbers))
+print(numbers)
 
+greater_numbers = []
 # TODO: use a list comprehension to create a list of only the numbers that are
 # greater than 9 from the numbers (not strings) you just created
+for i in numbers:
+    if i > 9:
+        greater_numbers.append(i)
+print(greater_numbers)
