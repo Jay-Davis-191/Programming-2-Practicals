@@ -8,7 +8,6 @@ MAX_NUMBER = 45
 NUMBER_EACH_LINE = 6
 
 
-
 # Program to generate number of random quick picks, given by the user
 def main(number_of_picks):
     quick_pick_list = []
@@ -22,10 +21,7 @@ def main(number_of_picks):
     quick_pick_list_sorted = sorted(quick_pick_list)
     print("  ".join(map(str, quick_pick_list_sorted)))
 
-
-
-
-
+    
 number_of_picks = int(input("How many quick picks? "))
 for x in range(number_of_picks):
     main(number_of_picks)
