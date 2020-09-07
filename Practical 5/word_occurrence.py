@@ -13,6 +13,7 @@ def word_count(str):
 print("Please enter a sentence")
 inputted_string = (input(">>> ")).lower()
 count_list = word_count(inputted_string)
+longest_word = max(count_list, key=len)
 
 for x in count_list:
-    print("{:10}: {:5}".format(x, count_list[x]))
+    print("{:{}} = {}".format(x, len(longest_word), count_list[x]))
