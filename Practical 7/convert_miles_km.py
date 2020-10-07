@@ -11,16 +11,16 @@ class MilesConversionApp(App):
         return self.root
 
     def convert_miles(self):
-        value = self.get_validated_miles()
+        value = self.validate_miles()
         result = value * MILES_TO_KM
         self.root.ids.output_km.text = str(result)
 
     def handle_increment(self, change):
-        value = self.get_validated_miles() + change
+        value = self.validate_miles() + change
         self.root.ids.input_miles.text = str(value)
         self.convert_miles()
 
-    def get_validated_miles(self):
+    def validate_miles(self):
         try:
             value = float(self.root.ids.input_miles.text)
             return value
